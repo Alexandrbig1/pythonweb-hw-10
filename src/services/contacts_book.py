@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.repository.contacts_book import ContactBookRepository
+from src.repositories.contacts_book import ContactBookRepository
 from src.schemas.contact_book import ContactBookSchema, ContactBookUpdateSchema , ContactBookResponse
 
 

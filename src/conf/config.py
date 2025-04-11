@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-from pydantic import ConfigDict
+from pydantic import ConfigDict, EmailStr
 
 class Settings(BaseSettings):
     POSTGRES_DB: str
@@ -9,17 +9,17 @@ class Settings(BaseSettings):
     POSTGRES_PORT: int
     
     # jwt
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
-    REFRESH_TOKEN_EXPIRE_DAYS: int = 7
-    ALGORITHM: str = "HS256"
-    SECRET_KEY: str = "secret"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int 
+    REFRESH_TOKEN_EXPIRE_DAYS: int 
+    ALGORITHM: str 
+    SECRET_KEY: str 
     # redis
-    REDIS_URL: str = "redis://localhost"
+    REDIS_URL: str 
     # mail
-    MAIL_USERNAME: EmailStr = ""
-    MAIL_PASSWORD: str = ""
-    MAIL_FROM: EmailStr = ""
-    MAIL_PORT: int = 465
+    MAIL_USERNAME: EmailStr 
+    MAIL_PASSWORD: str 
+    MAIL_FROM: EmailStr 
+    MAIL_PORT: int
     MAIL_SERVER: str = "smtp.meta.ua"
     MAIL_FROM_NAME: str = "Rest API Service"
     MAIL_STARTTLS: bool = False
